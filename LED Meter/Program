@@ -1,0 +1,16 @@
+#define LED 3
+#define BUTTON 2
+#define DITEKAN LOW
+
+void setup() {
+  pinMode(LED, OUTPUT);
+  pinMode(BUTTON, INPUT_PULLUP);
+
+}
+
+void loop() {
+if(digitalRead(BUTTON) == DITEKAN){
+  delay(50);
+  digitalWrite(LED, !digitalRead(LED));
+}
+}
