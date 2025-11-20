@@ -1,0 +1,14 @@
+const int soundPin = 9;
+const int pitchPin = A0;
+const int duration = 250;
+
+void setup() {}
+
+void loop() {
+  int input = analogRead(pitchPin);
+
+  int frequency = map(input, 0, 1023, 100, 5000);
+
+  tone(soundPin, frequency, duration);
+  delay(1000);
+}
